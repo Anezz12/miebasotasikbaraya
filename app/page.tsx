@@ -1,5 +1,4 @@
 export default function Home() {
-  // Sample student data - you can replace with your actual data
   const studentInfo = {
     nim: '22.11.4764',
     nama: 'Arya Rabbani',
