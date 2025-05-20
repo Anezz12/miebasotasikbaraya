@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function Home() {
   // Sample student data - you can replace with your actual data
   const studentInfo = {
