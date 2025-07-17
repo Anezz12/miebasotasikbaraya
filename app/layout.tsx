@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import NavbarPage from '@/Components/Main/Navbar';
-
+import LogoWa from '@/Components/Main/LogoWa';
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -30,6 +30,7 @@ export default function RootLayout({
       >
         <NavbarPage />
         {children}
+        <LogoWa />
       </body>
     </html>
   );

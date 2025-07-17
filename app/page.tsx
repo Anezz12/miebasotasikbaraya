@@ -5,6 +5,7 @@ import SimpleSteps from '@/Components/Main/SimpleSteps';
 import MenuSection from '@/Components/Menu/MenuSection';
 import CustomerReviewCard from '@/Components/Main/CustomerReviewCard';
 import LocationSection from '@/Components/Main/LocationSection';
+import Footer from '@/Components/Main/Footer';
 export default function Page() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Page() {
       <MenuSection />
       <CustomerReviewCard />
       <LocationSection />
+      <Footer />
     </>
   );
 }
