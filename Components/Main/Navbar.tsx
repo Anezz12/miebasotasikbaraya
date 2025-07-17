@@ -98,30 +98,42 @@ export default function NavbarPage() {
           isMobile ? 'top-[15px] w-[calc(100%-30px)]' : 'top-[30px] w-[1130px]'
         } left-1/2 -translate-x-1/2 flex items-center rounded-[100px] py-2.5 px-[15px] md:px-[30px] transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/80 backdrop-blur-md shadow-lg'
-            : 'bg-transparent backdrop-blur-sm'
+            ? 'bg-white/90 backdrop-blur-md shadow-lg'
+            : 'bg-white/80 backdrop-blur-sm'
         }`}
       >
         <Link
           href="/"
-          className="shrink-0 relative w-[120px] h-[35px] flex items-center justify-center"
+          className="shrink-0 relative w-[90px] h-[32px] flex items-center justify-center"
           onClick={() => handleNavLinkClick('logo')}
         >
-          <Image
-            src="/logo.jpg"
-            alt="Logo Mie Bakso Tasik Baraya"
-            height={300}
-            width={70}
-            style={{ objectFit: 'contain' }}
-            className="rounded-[100px] transition-all"
-            priority
-          />
+          {isMobile ? (
+            <Image
+              src="/logo.jpg"
+              alt="Logo Mie Bakso Tasik Baraya"
+              height={250}
+              width={45}
+              style={{ objectFit: 'contain' }}
+              className="rounded-[100px] transition-all"
+              priority
+            />
+          ) : (
+            <Image
+              src="/logo.jpg"
+              alt="Logo Mie Bakso Tasik Baraya"
+              height={300}
+              width={70}
+              style={{ objectFit: 'contain' }}
+              className="rounded-[100px] transition-all"
+              priority
+            />
+          )}
         </Link>
 
         {/* Mobile menu button */}
         {isMobile && (
           <button
-            className="ml-auto p-2 text-[#1e3c63]"
+            className="ml-auto p-2 text-[#DC143C]"
             onClick={() => {
               setIsMenuOpen(!isMenuOpen);
               event('mobile_menu_toggle', {
@@ -168,12 +180,12 @@ export default function NavbarPage() {
         {/* Desktop navigation */}
         {!isMobile && (
           <>
-            <div className="bg-[#1e3c63]/20 w-[1px] h-[50px] ml-[30px]"></div>
+            <div className="bg-[#DC143C]/20 w-[1px] h-[50px] ml-[30px]"></div>
             <ul className="flex items-center gap-5 md:gap-10 ml-[30px]">
               <li>
                 <Link
                   href="#about"
-                  className="text-[#1e3c63] text-[16px] font-semibold transition-all duration-300 hover:text-[#004AAD] hover:underline"
+                  className="text-[#DC143C] text-[16px] font-semibold transition-all duration-300 hover:text-[#B91C3C] hover:underline"
                   onClick={() => handleNavLinkClick('about')}
                 >
                   About
@@ -182,7 +194,7 @@ export default function NavbarPage() {
               <li>
                 <Link
                   href="#menu"
-                  className="text-[#1e3c63] text-[16px] font-semibold transition-all duration-300 hover:text-[#004AAD] hover:underline"
+                  className="text-[#DC143C] text-[16px] font-semibold transition-all duration-300 hover:text-[#B91C3C] hover:underline"
                   onClick={() => handleNavLinkClick('menu')}
                 >
                   Menu
@@ -191,7 +203,7 @@ export default function NavbarPage() {
               <li>
                 <Link
                   href="#location"
-                  className="text-[#1e3c63] text-[16px] font-semibold transition-all duration-300 hover:text-[#004AAD] hover:underline"
+                  className="text-[#DC143C] text-[16px] font-semibold transition-all duration-300 hover:text-[#B91C3C] hover:underline"
                   onClick={() => handleNavLinkClick('location')}
                 >
                   Location
@@ -200,7 +212,7 @@ export default function NavbarPage() {
               <li>
                 <Link
                   href="#contact"
-                  className="text-[#1e3c63] text-[16px] font-semibold transition-all duration-300 hover:text-[#004AAD] hover:underline"
+                  className="text-[#DC143C] text-[16px] font-semibold transition-all duration-300 hover:text-[#B91C3C] hover:underline"
                   onClick={() => handleNavLinkClick('contact')}
                 >
                   Contact
@@ -210,14 +222,14 @@ export default function NavbarPage() {
             <div className="ml-auto flex items-center gap-3.5">
               <Link
                 href="#"
-                className="px-5 h-[43px] flex items-center rounded-[100px] border border-[#1e3c63] text-[#1e3c63] text-[16px] font-bold leading-[19px] transition-all duration-300 hover:bg-[#1e3c63] hover:text-white text-center"
+                className="px-5 h-[43px] flex items-center rounded-[100px] border border-[#DC143C] text-[#DC143C] text-[16px] font-bold leading-[19px] transition-all duration-300 hover:bg-[#DC143C] hover:text-white text-center"
                 onClick={handleOrderOnlineClick}
               >
                 Order Online
               </Link>
               <Link
                 href="#"
-                className="bg-[#1e3c63] text-white text-[16px] font-semibold px-5 h-[43px] flex items-center rounded-[100px] transition-all duration-300 hover:bg-[#004AAD]"
+                className="bg-[#DC143C] text-white text-[16px] font-semibold px-5 h-[43px] flex items-center rounded-[100px] transition-all duration-300 hover:bg-[#B91C3C]"
                 onClick={handleBookTableClick}
               >
                 Book a Table
@@ -228,12 +240,12 @@ export default function NavbarPage() {
 
         {/* Mobile dropdown menu */}
         {isMobile && isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 mt-2 bg-white/90 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-[#1e3c63]/10">
+          <div className="absolute top-full left-0 right-0 mt-2 bg-white/90 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-[#DC143C]/10">
             <ul className="flex flex-col space-y-4 mb-4">
               <li>
                 <Link
                   href="#about"
-                  className="block text-[#1e3c63] text-[16px] font-semibold transition-all duration-300 hover:text-[#004AAD]"
+                  className="block text-[#DC143C] text-[16px] font-semibold transition-all duration-300 hover:text-[#B91C3C]"
                   onClick={() => {
                     setIsMenuOpen(false);
                     handleNavLinkClick('about mobile');
@@ -245,7 +257,7 @@ export default function NavbarPage() {
               <li>
                 <Link
                   href="#menu"
-                  className="block text-[#1e3c63] text-[16px] font-semibold transition-all duration-300 hover:text-[#004AAD]"
+                  className="block text-[#DC143C] text-[16px] font-semibold transition-all duration-300 hover:text-[#B91C3C]"
                   onClick={() => {
                     setIsMenuOpen(false);
                     handleNavLinkClick('menu mobile');
@@ -257,7 +269,7 @@ export default function NavbarPage() {
               <li>
                 <Link
                   href="#location"
-                  className="block text-[#1e3c63] text-[16px] font-semibold transition-all duration-300 hover:text-[#004AAD]"
+                  className="block text-[#DC143C] text-[16px] font-semibold transition-all duration-300 hover:text-[#B91C3C]"
                   onClick={() => {
                     setIsMenuOpen(false);
                     handleNavLinkClick('location mobile');
@@ -269,7 +281,7 @@ export default function NavbarPage() {
               <li>
                 <Link
                   href="#contact"
-                  className="block text-[#1e3c63] text-[16px] font-semibold transition-all duration-300 hover:text-[#004AAD]"
+                  className="block text-[#DC143C] text-[16px] font-semibold transition-all duration-300 hover:text-[#B91C3C]"
                   onClick={() => {
                     setIsMenuOpen(false);
                     handleNavLinkClick('contact mobile');
@@ -282,7 +294,7 @@ export default function NavbarPage() {
             <div className="flex flex-col gap-3">
               <Link
                 href="#"
-                className="text-[#1e3c63] border border-[#1e3c63] text-center text-[16px] font-semibold px-5 py-3 rounded-[100px] transition-all duration-300 hover:bg-[#1e3c63]/5"
+                className="text-[#DC143C] border border-[#DC143C] text-center text-[16px] font-semibold px-5 py-3 rounded-[100px] transition-all duration-300 hover:bg-[#DC143C]/5"
                 onClick={() => {
                   setIsMenuOpen(false);
                   handleOrderOnlineClick();
@@ -292,7 +304,7 @@ export default function NavbarPage() {
               </Link>
               <Link
                 href="#"
-                className="bg-[#1e3c63] text-white text-center text-[16px] font-semibold px-5 py-3 rounded-[100px] transition-all duration-300 hover:bg-[#004AAD]"
+                className="bg-[#DC143C] text-white text-center text-[16px] font-semibold px-5 py-3 rounded-[100px] transition-all duration-300 hover:bg-[#B91C3C]"
                 onClick={() => {
                   setIsMenuOpen(false);
                   handleBookTableClick();
