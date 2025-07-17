@@ -2,30 +2,6 @@
 import MenuCategory from '@/Components/Menu/MenuCategory';
 import { motion } from 'framer-motion';
 
-// Service Banner Component
-const ServiceBanner = () => (
-  <div className="bg-gradient-to-r from-[#DC143C] to-[#B91C3C] rounded-2xl p-8 text-white text-center">
-    <h3 className="text-2xl font-bold mb-4">Pelayanan Terbaik untuk Anda</h3>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="flex flex-col items-center">
-        <span className="text-3xl mb-2">🍜</span>
-        <span className="font-semibold">Fresh Daily</span>
-        <span className="text-sm opacity-90">Dibuat segar setiap hari</span>
-      </div>
-      <div className="flex flex-col items-center">
-        <span className="text-3xl mb-2">🚚</span>
-        <span className="font-semibold">Delivery</span>
-        <span className="text-sm opacity-90">Antar ke rumah Anda</span>
-      </div>
-      <div className="flex flex-col items-center">
-        <span className="text-3xl mb-2">💯</span>
-        <span className="font-semibold">100% Halal</span>
-        <span className="text-sm opacity-90">Terjamin kehalalannya</span>
-      </div>
-    </div>
-  </div>
-);
-
 export default function MenuSection() {
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -273,14 +249,6 @@ export default function MenuSection() {
               dengan cita rasa autentik yang telah diwariskan turun temurun
               selama puluhan tahun.
             </p>
-          </motion.div>
-
-          {/* Service Banner */}
-          <motion.div
-            className="w-full max-w-4xl mx-auto mb-16"
-            variants={fadeInUp}
-          >
-            <ServiceBanner />
           </motion.div>
 
           {/* Menu Categories */}

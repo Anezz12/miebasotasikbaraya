@@ -226,31 +226,6 @@ export default function SimpleSteps() {
               </div>
             </motion.div>
           </div>
-
-          {/* Call to Action */}
-          <motion.div className="text-center mt-12" variants={fadeInUp}>
-            <div className="bg-gradient-to-r from-[#DC143C] to-[#B91C3C] rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Siap Memesan?</h3>
-              <p className="text-lg mb-6 opacity-90">
-                Hubungi kami sekarang dan rasakan kelezatan mie bakso khas
-                Tasikmalaya!
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="tel:+6281234567890"
-                  className="px-8 py-3 bg-white text-[#DC143C] rounded-full font-bold hover:bg-gray-100 transition-colors duration-300"
-                >
-                  📞 Telepon Sekarang
-                </a>
-                <a
-                  href="https://wa.me/6281234567890"
-                  className="px-8 py-3 bg-green-500 text-white rounded-full font-bold hover:bg-green-600 transition-colors duration-300"
-                >
-                  💬 WhatsApp
-                </a>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
